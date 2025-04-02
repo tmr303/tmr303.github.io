@@ -1,0 +1,181 @@
+/* Retro Wave / Synthwave Theme */
+:root {
+    --neon-pink: #ff2a6d;
+    --neon-blue: #05d9e8;
+    --neon-purple: #d300c5;
+    --dark-blue: #0d0221;
+    --deep-purple: #1a0933;
+  }
+  
+  body {
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-blue);
+    color: #fff;
+    background-image: 
+      linear-gradient(to bottom, rgba(210, 0, 197, 0.15) 1px, transparent 1px),
+      linear-gradient(to right, rgba(5, 217, 232, 0.15) 1px, transparent 1px);
+    background-size: 20px 20px;
+    line-height: 1.6;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px 0;
+    background: linear-gradient(90deg, var(--deep-purple), var(--dark-blue));
+    color: white;
+    border-bottom: 3px solid var(--neon-pink);
+    box-shadow: 0 0 15px var(--neon-purple);
+    position: relative;
+    z-index: 10;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue);
+    letter-spacing: 2px;
+  }
+  
+  header p {
+    margin: 5px 0 0;
+    font-size: 1.2em;
+    text-shadow: 0 0 3px var(--neon-pink);
+  }
+  
+  section {
+    background: rgba(13, 2, 33, 0.8);
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 0;
+    border-left: 3px solid var(--neon-blue);
+    border-right: 3px solid var(--neon-purple);
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(5, 217, 232, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--neon-pink), var(--neon-blue), var(--neon-purple));
+  }
+  
+  h2 {
+    color: var(--neon-blue);
+    font-size: 1.8em;
+    margin-top: 0;
+    text-shadow: 0 0 3px var(--neon-blue);
+    border-bottom: 1px dashed var(--neon-pink);
+    padding-bottom: 5px;
+    display: inline-block;
+  }
+  
+  .contact-info p, .skills li, .experience li, .education li {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .contact-info p::before, 
+  .skills li::before, 
+  .experience li::before, 
+  .education li::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    color: var(--neon-pink);
+  }
+  
+  a {
+    color: var(--neon-blue);
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  a:hover {
+    color: var(--neon-pink);
+    text-shadow: 0 0 5px var(--neon-pink);
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 15px;
+    background: var(--deep-purple);
+    color: var(--neon-blue);
+    font-size: 0.9em;
+    border-top: 1px solid var(--neon-purple);
+    box-shadow: 0 0 10px rgba(210, 0, 197, 0.3);
+  }
+  
+  /* Grid lines for full retro effect */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      linear-gradient(to bottom, rgba(255, 42, 109, 0.05) 1px, transparent 1px),
+      linear-gradient(to right, rgba(5, 217, 232, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  /* Animated sun/moon for authentic synthwave feel */
+  body::after {
+    content: '';
+    position: fixed;
+    top: 20%;
+    right: 15%;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, var(--neon-pink), transparent 70%);
+    border-radius: 50%;
+    box-shadow: 0 0 30px var(--neon-pink);
+    z-index: -1;
+    animation: pulse 4s infinite alternate;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1.1);
+      opacity: 0.9;
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    body {
+      padding: 10px;
+    }
+    
+    section {
+      padding: 15px;
+      margin: 10px 0;
+    }
+    
+    header h1 {
+      font-size: 2em;
+    }
+    
+    body::after {
+      top: 10%;
+      right: 10%;
+      width: 60px;
+      height: 60px;
+    }
+  }
